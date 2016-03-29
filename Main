@@ -1,0 +1,20 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Methods methods = new Methods();
+		
+		boolean check, play = true;
+		
+		methods.createGameBoard();
+		methods.setInitialPositionBaby();
+		methods.updateGameBoard();
+		while(play) {
+			methods.moveBaby();
+			methods.placeWall();
+			check = methods.checkPosBaby();
+			play = check;
+		}
+	}
+
+}
